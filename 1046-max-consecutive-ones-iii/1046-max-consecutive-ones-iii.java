@@ -6,16 +6,16 @@ class Solution {
         while(r < nums.length) {
             if(nums[r] == 0)
                 zeroCount++;
-            while(zeroCount > k) {
-                if(nums[l] == 0)    
-                    zeroCount--;
-                l++;
-            }
-            // if(zeroCount > k) {
-            //     if(nums[l] == 0)
+            // while(zeroCount > k) {
+            //     if(nums[l] == 0)    
             //         zeroCount--;
             //     l++;
             // }
+            if(zeroCount > k) {
+                if(nums[l] == 0)
+                    zeroCount--;
+                l++;
+            }
             if(zeroCount <= k) {
                 int len = r - l + 1;
                 maxLen = Math.max(len, maxLen);
