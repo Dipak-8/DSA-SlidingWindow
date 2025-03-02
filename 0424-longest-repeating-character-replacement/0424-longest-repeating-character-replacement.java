@@ -18,8 +18,8 @@ class Solution {
                 while(ct > k) {
                     char ch = s.charAt(l);
                     map.put(ch, map.getOrDefault(ch, 0) - 1);
-                    maxFreq = Math.max(maxFreq, map.get(ch));
                     l++;
+                    maxFreq = Math.max(maxFreq, map.get(ch));
                     len = r - l + 1;
                     ct = len - maxFreq;
                     if(ct <= k)
