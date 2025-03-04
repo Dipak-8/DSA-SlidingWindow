@@ -7,11 +7,9 @@ class Solution {
         int n = nums.length;
         
         while(r < n) {
-            if(nums[r] % 2 != 0)
-                oddCount++;
+            oddCount += nums[r] % 2;
             while(oddCount > k) {
-                if(nums[l] % 2 != 0)
-                    oddCount--;
+                oddCount -= nums[l] % 2;
                 l++;
             }
             count += r - l + 1;
