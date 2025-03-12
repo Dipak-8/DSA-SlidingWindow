@@ -17,7 +17,7 @@ class Solution {
             if(map.containsKey(ch) && map.get(ch) > 0) {
                count++;
             }
-            map.put(ch, map.getOrDefault(ch, 0) - 1);  
+            map.put(ch, map.getOrDefault(ch, -1) - 1);  
             
             while(count == n) {
                 if(r - l + 1 < minLen) {
